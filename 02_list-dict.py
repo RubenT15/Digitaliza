@@ -1,0 +1,14 @@
+listaStrings=["Hola","me","llamo","Ruben"]
+listaIntegers=[1,2,3,4,5,6]
+listaMixta=["Mezcla",5,8.0,"Peseta",4,16.45]
+print(listaStrings)
+print(listaIntegers)
+print(listaMixta)
+var1=listaStrings[-1]
+var2=listaIntegers[-1]
+var3=listaMixta[-1]
+print(var1+"-"+str(var2)+"-"+str(var3))
+diccionario={"Director1":"Pelicula1","Director2":"Pelicula2","Director3":"Pelicula3"}
+print(diccionario)
+print(diccionario.keys())
+print(diccionario.values())
