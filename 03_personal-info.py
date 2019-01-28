@@ -1,0 +1,6 @@
+nombre=input("Introduzca su nombre")
+apellido=input("Introduzca su apellido")
+telefono=input("Introduzca su telefono")
+ciudad=input("Introduzca su ciudad")
+edad=input("Introduzca su edad")
+print("El usuario "+nombre+" "+apellido+", con telefono "+telefono+" reside en "+ciudad+" y tiene "+edad+" años.")
