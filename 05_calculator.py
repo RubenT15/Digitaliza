@@ -1,3 +1,17 @@
+def printOptions():
+    print("1.Suma"
+          " 2.Resta"
+          " 3.Multiplicacion"
+          " 4.Division"
+          " 5.Exponencial")
+def calc(option,num1,num2):
+    return {
+         1: num1+num2,
+         2: num1-num2,
+         3: num1*num2,
+         4: num1/num2,
+         5: num1**num2,
+    }.get(option, 0)
 opcion=0
 numCorrecto=True
 num1=0
@@ -10,22 +24,17 @@ while numCorrecto:
         numCorrecto=False
     except ValueError:
         print("Introduzca unicamente numeros")
-while opcion<1 or opcion>4:
-    print("1.Suma"
-          " 2.Multiplicacion"
-          " 3.Division"
-          " 4.Exponencial")
+while opcion<1 or opcion>5:
+    printOptions()
     try:
         opcion=int(input("¿Que tipo de operacion deseas realizar? "))
     except ValueError:
         opcion=0
-if opcion==1:
-    resultado=num1+num2
-elif opcion==2:
-    resultado=num1*num2
-elif opcion==3:
-    resultado=num1/num2
-elif opcion==4:
-    resultado=num1**num2
-    
-print("El resultado es "+str(resultado))
+try:        
+    resultado=calc(opcion,num1,num2)
+    print("El resultado es "+str(resultado))
+except ZeroDivisionError:
+    print("No puedes dividir entre 0!")
+except:
+    print("Algo fue mal")
+
